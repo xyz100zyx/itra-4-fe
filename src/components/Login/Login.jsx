@@ -13,9 +13,9 @@ export const Login = () => {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
 
-    function onLoginClick(e){
+    async function onLoginClick(e){
         e.preventDefault();
-        dispatch(login({email, password}));
+        await dispatch(login({email, password}));
         if(localStorage.getItem('token')){
             navigate('/');
         }

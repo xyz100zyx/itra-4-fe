@@ -10,6 +10,6 @@ export const ButtonLogout = () => {
     }
 
     return (
-        <button onClick={() => onButtonClick()} className={"py-4 px-8 mt-8 rounded-2xl border-2 border-gray-800"}>Logout</button>
+        <button onClick={() => onButtonClick()} className={"py-4 px-8 mt-8 border border-gray-800"}>Logout</button>
     )
 }
