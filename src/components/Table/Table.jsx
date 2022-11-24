@@ -16,7 +16,9 @@ export const Table = () => {
 
     React.useEffect(()=>{
         if(!localStorage.getItem('token')) navigate('/auth/login')
-        dispatch(fetchUsers()).then(data => {setUsers(Object.values(data.payload))});
+        else{
+            dispatch(fetchUsers()).then(data => {setUsers(Object.values(data.payload))});
+        }
     }, [])
 
     const tableHeaders = [
@@ -33,8 +35,8 @@ export const Table = () => {
         <div className={"w-full mx-auto border-t-gray-500"}>
             <Toolbar actionUsers={setUsers}/>
             <div className={"flex w-full justify-between cursor-pointer pb-2.5"}>
-                {tableHeaders.map(header => {
-                    return <Cell>{header}</Cell>
+                {tableHeaders.map((header, index) => {
+                    return <Cell key={`${header}-${index}`}>{header}</Cell>
                 })}
             </div>
             {users.map(user => {
