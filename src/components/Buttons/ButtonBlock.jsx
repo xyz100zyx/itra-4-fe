@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
 import {blockUsers} from "../../store/slices/usersSlice";
 import {setIds} from "../../store/slices/idsSlice";
+import svgIcons from '../../assets/img/icons.svg';
 
 export const ButtonBlock = ({actionUsers}) => {
 
@@ -20,8 +21,11 @@ export const ButtonBlock = ({actionUsers}) => {
     }
 
     return (
-        <button onClick={()=>onButtonClick()} className={"max-w-25 border-gray-500 p-4"}>
-            Block
+        <button onClick={()=>onButtonClick()} className={"flex items-center max-w-25 border-gray-500 p-4"}>
+            <svg width={24} height={24}>
+                <use xlinkHref={`${svgIcons}#block`}/>
+            </svg>
+            <span className={"pl-2"}>Block</span>
         </button>
     )
 }
