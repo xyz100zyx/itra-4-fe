@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/itra-4-fe/npm/static/css/main.a9417507.css",
+    "main.js": "/itra-4-fe/npm/static/js/main.4e55c80f.js",
+    "static/media/icons.svg": "/itra-4-fe/npm/static/media/icons.a74668e769569d0c1054c8615996c432.svg",
+    "index.html": "/itra-4-fe/npm/index.html",
+    "main.a9417507.css.map": "/itra-4-fe/npm/static/css/main.a9417507.css.map",
+    "main.4e55c80f.js.map": "/itra-4-fe/npm/static/js/main.4e55c80f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9417507.css",
+    "static/js/main.4e55c80f.js"
+  ]
+}
