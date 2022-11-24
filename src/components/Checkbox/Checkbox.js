@@ -10,7 +10,6 @@ export const Checkbox = ({userId, main}) => {
     const users = useSelector(state => state.users.users);
     const selectedIds = useSelector(state => state.ids.selectedIds);
 
-
     const onCheckBoxClick = () => {
         if(main){
             users.map(user => {
@@ -21,7 +20,6 @@ export const Checkbox = ({userId, main}) => {
             dispatch(setIds(userId))
         }
     }
-
 
     return (
         <input onChange={() => onCheckBoxClick()} checked={selectedIds.includes(userId) || users.length === selectedIds.length} type="checkbox"/>

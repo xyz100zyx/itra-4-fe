@@ -12,14 +12,18 @@ export const Login = () => {
 
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
+
     function onLoginClick(e){
-        console.log('btn click')
         e.preventDefault();
         dispatch(login({email, password}));
         if(localStorage.getItem('token')){
             navigate('/');
         }
     }
+
+    React.useEffect(() => {
+        localStorage.removeItem('token')
+    }, [])
 
     return (
         <form className={"flex flex-col"} action="POST">
